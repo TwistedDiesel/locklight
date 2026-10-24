@@ -1,0 +1,17 @@
+Signing an optional trusted release
+==================================
+The distributed executable is unsigned. Application Control may block it.
+A trusted code-signing certificate or cloud signing service can be used for
+release signing. Organization-specific policies can impose additional rules.
+
+Sign-Release.ps1 supports a code-signing identity installed in the Windows
+personal certificate store. Install the Windows SDK Signing Tools, build the
+EXE, then run:
+  .\Sign-Release.ps1 -CertificateThumbprint YOUR_CERTIFICATE_THUMBPRINT
+Use -LocalMachineStore or -SignToolPath if appropriate.
+
+The script signs, timestamps, verifies, and packages the executable with GPL
+notices and complete corresponding source. Cloud signing requires the chosen
+provider's integration. Never commit private keys, passwords or access tokens.
+
+https://learn.microsoft.com/en-us/windows/apps/develop/smart-app-control/code-signing-for-smart-app-control

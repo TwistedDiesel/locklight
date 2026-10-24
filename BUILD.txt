@@ -1,0 +1,5 @@
+Build with Windows PowerShell:
+  powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\build.ps1
+Requires the Windows .NET Framework 4.x compiler. No external packages.
+See README.md for full instructions. Licensed GPL-3.0-or-later.
+Copyright (C) 2026 Lawrence Shafer — https://shaferlabs.com
